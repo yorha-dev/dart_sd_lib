@@ -1,3 +1,11 @@
 [submodule "stable-diffusion.cpp"]
     path = src/stable-diffusion.cpp
-        url = https://github.com/mysterious-man01/stable-diffusion.cpp.git
+        url = https://github.com/leejet/stable-diffusion.cpp.git
+
+[submodule "Vulkan-Headers"]
+    path = src/vulkan/Vulkan-Headers
+        url = https://github.com/KhronosGroup/Vulkan-Headers.git
+
+[submodule "SPIRV-Headers"]
+    path = src/spirv/SPIRV-Headers
+        url = https://github.com/KhronosGroup/SPIRV-Headers.git

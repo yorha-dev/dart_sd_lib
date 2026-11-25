@@ -1,16 +1,30 @@
-# Run with `flutter pub run ffigen --config ffigen.yaml`.
+# To execute ffigen you must download stable-diffusion.cpp:
+# 1. cd src
+# 2. mkdir build
+# 3. cd build
+# 4. cmake ..
+# 5. cd ../../
+# Run with `dart run ffigen --config ffigen.yaml`.
 
 name: 'stable_diffusion'
-description: 'Bindings to stable-diffusion.cpp.'
+description: 'Bindings for stable-diffusion.cpp.'
 output: 'lib/bind/stable_diffusion.dart'
-llvm-path:
-  - 'C:\Program Files\LLVM' # Change it for your LLVM path
 headers:
   entry-points:
-    - 'src/stable-diffusion.cpp/stable-diffusion.h'
+    - 'src/stable-diffusion.cpp/include/stable-diffusion.h'
+
+# Use this if ffigen can not find clang include files by itself
+compiler-opts:
+  # Uncoment it and change the clang version
+  # Or run 'clang -print-resource-dir' and copy the result to this line
+  - '-I/usr/lib/clang/22/include'
+
 preamble: |
   // ignore_for_file: always_specify_types
   // ignore_for_file: camel_case_types
   // ignore_for_file: non_constant_identifier_names
   // ignore_for_file: unused_element
   // ignore_for_file: unused_field
+comments:
+  style: any
+  length: full

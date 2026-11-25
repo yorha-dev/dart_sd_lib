@@ -1,7 +1,7 @@
 name: dart_sd_lib
-description: "A Dart/Flutter bind of stable-diffusion.cpp."
+description: "A Dart/Flutter binding for stable-diffusion.cpp."
 version: 0.0.1
-homepage: https://github.com/mysterious-man01/dart_sd_lib.git
+homepage: https://github.com/yorha-dev/dart_sd_lib.git
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -40,7 +40,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.exemple.dart_sd_lib
+        package: com.example.dart_sd_lib
         ffiPlugin: true
       linux:
         ffiPlugin: true
